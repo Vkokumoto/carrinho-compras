@@ -8,7 +8,13 @@ function adicionar() {
     let nomeProduto = produtoSelecionado.split('-')[0];
     let valorUnitario = produtoSelecionado.split('R$')[1];
     let quantidadeProduto = document.getElementById('quantidade').value;
-        
+    
+    // proteção na entrada de valor de quantidade
+    if (quantidadeProduto <= 0) {
+        alert('Quantidade de produtos inválida. Tente novamente!');
+        return;
+    }
+
     // calcular o valor do subtotal
     let preco = quantidadeProduto * valorUnitario;
 
