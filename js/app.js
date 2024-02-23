@@ -26,3 +26,9 @@ function adicionar() {
     // zerar valor QUANTIDADE após adicionar o produto no carrinho
     document.getElementById('quantidade').value = 0;
 }
+
+function limpar() {
+    valorTotal = 0;
+    document.getElementById('lista-produtos').innerHTML = '';
+    document.getElementById('valor-total').innerHTML = 'R$ 0';
+}
